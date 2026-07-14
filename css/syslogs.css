@@ -1,0 +1,39 @@
+/* ============================================================
+ *  系统日志分析 —— 新拟态风格
+ *  复用 logs.css 的公共类，仅补充系统日志特有的列布局与级别配色。
+ * ============================================================ */
+
+/* 表格列：# / 时间 / 主机 / 来源 / 级别 / 事件ID / 消息 / 风险 */
+#sys-lt { --lt-cols: 56px 150px 116px 152px 74px 78px minmax(220px, 1fr) 150px; }
+
+.lt-c--host, .lt-c--src { font-family: var(--font-mono); color: var(--text-secondary); }
+.lt-c--src { color: var(--text-heading); font-weight: 600; }
+.lt-c--eid { font-family: var(--font-mono); color: var(--text-secondary); }
+.lt-c--msg { font-family: var(--font-mono); color: var(--text-heading); }
+.lt-c--lv { overflow: visible; }
+
+/* ── 级别徽标 ── */
+.slt-lv {
+  display: inline-block; font-size: 10.5px; font-weight: 700; line-height: 1.5;
+  padding: 0 8px; border-radius: var(--radius-full); white-space: nowrap;
+}
+.slt-lv--crit   { color: #fff; background: var(--severity-critical); }
+.slt-lv--err    { color: var(--severity-high); background: var(--severity-high-bg); }
+.slt-lv--warn   { color: var(--severity-medium); background: var(--severity-medium-bg); }
+.slt-lv--notice { color: var(--severity-info); background: var(--severity-info-bg); }
+.slt-lv--info   { color: var(--severity-low); background: var(--severity-low-bg); }
+.slt-lv--debug  { color: var(--text-muted); background: var(--bg-code); box-shadow: var(--shadow-inset); }
+
+/* ── 级别分布条 ── */
+.slt-seg { height: 100%; }
+.slt-seg--crit   { background: var(--severity-critical); }
+.slt-seg--err    { background: var(--severity-high); }
+.slt-seg--warn   { background: var(--severity-medium); }
+.slt-seg--notice { background: var(--severity-info); }
+.slt-seg--info   { background: var(--severity-low); }
+.slt-seg--debug  { background: var(--text-ghost); }
+
+/* 窄屏列布局 */
+@media (max-width: 920px) {
+  #sys-lt { --lt-cols: 44px 120px 90px 110px 64px 56px minmax(120px, 1fr) 96px; }
+}

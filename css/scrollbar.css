@@ -1,0 +1,93 @@
+/* ============================================================
+ *  全局工业级滚动条
+ *  新拟态风格，所有可滚动区域统一
+ * ============================================================ */
+
+/* ── 全局基础：隐藏页面级滚动条（由子区域管理） ── */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar { display: none; }
+
+/* ── 所有可滚动容器 ── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+/* ── Webkit 内核（Chrome/Edge/Opera）统一滚动条 ── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  min-height: 40px;
+  transition: background 0.2s ease, width 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--text-muted);
+  border: 1.5px solid transparent;
+  background-clip: content-box;
+}
+
+/* ── 角落（横竖滚动条交汇处） ── */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ── Firefox 样式 ── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+/* ── 日志虚拟滚动视口微调 ── */
+.lt-viewport::-webkit-scrollbar {
+  width: 10px;
+}
+.lt-viewport::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  min-height: 40px;
+}
+
+/* ── 右侧详情侧栏 ── */
+.lt-side__body::-webkit-scrollbar {
+  width: 10px;
+}
+.lt-side__body::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  min-height: 40px;
+}
+
+/* ── 代码块/文本域 ── */
+.tool-input.mono::-webkit-scrollbar,
+textarea::-webkit-scrollbar,
+pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}

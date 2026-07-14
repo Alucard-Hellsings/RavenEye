@@ -1,0 +1,24 @@
+/* ── 扰码激活态：等宽字体 + 次级颜色 ── */
+.scramble-active {
+  font-family: var(--font-mono) !important;
+  color: var(--text-muted) !important;
+  letter-spacing: 0 !important;
+  white-space: pre-wrap;
+  /* 正文 encode 结束后立刻 remove 此类，避免影响新 HTML */
+}
+
+/* 文章条目逐行渐入 */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.entry {
+  animation: fade-in 200ms ease both;
+}
+.entry:nth-child(1) { animation-delay: 0ms; }
+.entry:nth-child(2) { animation-delay: 30ms; }
+.entry:nth-child(3) { animation-delay: 60ms; }
+.entry:nth-child(4) { animation-delay: 90ms; }
+.entry:nth-child(5) { animation-delay: 120ms; }
+.entry:nth-child(6) { animation-delay: 150ms; }

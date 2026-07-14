@@ -1,0 +1,119 @@
+:root {
+  /* ── 新拟态基础色板：冷灰单色 ── */
+  --bg-body: #E0E5EC;
+  --bg-surface: #E0E5EC;
+  --bg-surface-hover: #d7dce4;
+  --bg-inset: #d5dae2;
+  --bg-code: #dde2e9;
+  --bg-titlebar: #d2d7df;
+
+  /* ── 阴影（新拟态双阴影系统） ── */
+  --shadow-extruded: 8px 8px 16px rgba(163,177,198,0.6), -8px -8px 16px rgba(255,255,255,0.5);
+  --shadow-extruded-hover: 10px 10px 20px rgba(163,177,198,0.7), -10px -10px 20px rgba(255,255,255,0.6);
+  --shadow-extruded-sm: 4px 4px 8px rgba(163,177,198,0.5), -4px -4px 8px rgba(255,255,255,0.4);
+  --shadow-inset: inset 3px 3px 6px rgba(163,177,198,0.6), inset -3px -3px 6px rgba(255,255,255,0.5);
+  --shadow-inset-deep: inset 6px 6px 12px rgba(163,177,198,0.7), inset -6px -6px 12px rgba(255,255,255,0.6);
+  --shadow-inset-input: inset 4px 4px 8px rgba(163,177,198,0.6), inset -3px -3px 7px rgba(255,255,255,0.5);
+
+  /* ── 文字色（WCAG AAA 合规） ── */
+  --text-body: #3D4852;
+  --text-heading: #2D3748;
+  --text-secondary: #5A6570;
+  --text-muted: #7A8590;
+  --text-ghost: #9BA5AF;
+
+  /* ── 边框（新拟态中极少使用，保留用于分隔线） ── */
+  --border: #d1d6de;
+  --border-strong: #bcc2cc;
+
+  /* ── 强调色（蓝紫色，用于 focus ring / primary 按钮） ── */
+  --accent: #6C63FF;
+  --accent-hover: #5a52e0;
+
+  /* ── 严重等级标记色 ── */
+  --severity-critical: #c53030;
+  --severity-critical-bg: #fce8e8;
+  --severity-high: #c05621;
+  --severity-high-bg: #fef0e0;
+  --severity-medium: #b58a1a;
+  --severity-medium-bg: #fcf6d6;
+  --severity-low: #276749;
+  --severity-low-bg: #e6f7ee;
+  --severity-info: #2b6cb0;
+  --severity-info-bg: #e3f0fc;
+
+  /* ── 圆角（新拟态大圆角） ── */
+  --radius-sm: 12px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* ── 字体 ── */
+  --font-heading: Georgia, 'Noto Serif SC', 'SimSun', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace;
+
+  /* ── 间距 ── */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 14px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-2xl: 36px;
+
+  /* ── 布局尺寸 ── */
+  --sidebar-width: 260px;
+  --detail-list-width: 280px;
+  --nav-height: 48px;
+  --edge-pad: 28px;
+
+  /* ── 过渡 ── */
+  --transition: 300ms ease;
+  --theme-fade: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+  color-scheme: light;
+}
+
+/* ── 暗色新拟态 ── */
+:root[data-theme="dark"] {
+  --bg-body: #1a1d23;
+  --bg-surface: #1a1d23;
+  --bg-surface-hover: #22262e;
+  --bg-inset: #1e2128;
+  --bg-code: #1e2128;
+  --bg-titlebar: #15181d;
+
+  /* 暗色阴影：光源反转（左上暗/右下亮） */
+  --shadow-extruded: 6px 6px 14px rgba(0,0,0,0.5), -6px -6px 14px rgba(50,55,65,0.4);
+  --shadow-extruded-hover: 8px 8px 18px rgba(0,0,0,0.6), -8px -8px 18px rgba(50,55,65,0.5);
+  --shadow-extruded-sm: 3px 3px 6px rgba(0,0,0,0.4), -3px -3px 6px rgba(50,55,65,0.3);
+  --shadow-inset: inset 3px 3px 6px rgba(0,0,0,0.5), inset -3px -3px 6px rgba(50,55,65,0.4);
+  --shadow-inset-deep: inset 5px 5px 10px rgba(0,0,0,0.6), inset -5px -5px 10px rgba(50,55,65,0.5);
+  --shadow-inset-input: inset 4px 4px 8px rgba(0,0,0,0.5), inset -3px -3px 7px rgba(50,55,65,0.4);
+
+  --text-body: #c8cdd6;
+  --text-heading: #e2e6ee;
+  --text-secondary: #a0a8b4;
+  --text-muted: #7a828e;
+  --text-ghost: #5c646e;
+
+  --border: #262a32;
+  --border-strong: #333842;
+
+  --accent: #5b52cc;
+  --accent-hover: #6e66d6;
+
+  --severity-critical: #f87171;
+  --severity-critical-bg: #2c1517;
+  --severity-high: #fb923c;
+  --severity-high-bg: #2c1d10;
+  --severity-medium: #fbbf24;
+  --severity-medium-bg: #2c2410;
+  --severity-low: #4ade80;
+  --severity-low-bg: #11251a;
+  --severity-info: #60a5fa;
+  --severity-info-bg: #122236;
+
+  color-scheme: dark;
+}
