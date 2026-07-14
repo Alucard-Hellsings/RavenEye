@@ -16,7 +16,6 @@
   <a href="https://github.com/Alucard-Hellsings/RavenEye/releases"><img src="https://img.shields.io/github/v/release/Alucard-Hellsings/RavenEye?color=blue&label=version" alt="版本"></a>
   <a href="https://github.com/Alucard-Hellsings/RavenEye/releases"><img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg" alt="平台"></a>
   <a href="https://www.electronjs.org/"><img src="https://img.shields.io/badge/built%20with-Electron-blueviolet.svg" alt="基于 Electron 构建"></a>
-  <a href="https://github.com/Alucard-Hellsings/RavenEye/releases/latest"><img src="https://img.shields.io/github/downloads/Alucard-Hellsings/RavenEye/total" alt="下载"></a>
 </p>
 
 <p align="center">
